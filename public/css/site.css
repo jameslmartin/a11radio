@@ -26,40 +26,15 @@ a:active {
 .flex-container {
 	display: flex;
   flex-flow: column wrap;
-	margin: 20px;
 }
 
-.flex-item {
-	flex: 1 1 auto;
+.player {
+	width: 100%;
+	height: auto;
 }
 
-#banner {
-	display: flex;
-	flex-flow: row wrap;
-	flex: 0 1 auto;
-	align-items: baseline;
-	justify-content: space-between;
-	align-content: space-between;
-}
-
-#menu ul{
-	list-style: none;
-	padding-left: 0px;
-	justify-content: space-between;
-}
-
-.menu-page {
-	margin-right: 10px;
-}
-
-#post-list {
-	padding-inline-start: 20px;
-}
-
-#sitename {
-	text-align: left;
-}
-
-#sitename a {
-	text-decoration: underline;
+.vjs-modal-dialog-content {
+	text-align: center;
+	font-size: large;
+	font-family: Helvetica;
 }
