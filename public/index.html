@@ -5,10 +5,29 @@
   <title>a11 radio</title>
   <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
   <link href="css/site.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
   <div class="flex-container">
-    <div class="player">
+    <div class="header-nav">
+      <div class="header-nav-inner">
+        <div class="header-item"><a href="#player">TUNE IN</a></div>
+        <div class="header-item"><a href="about/">ABOUT</a></div>
+      </div>
+      <div class="header-nav-center">
+        <a class="logo" href=".">
+          <img class="logo"src="images/logo_edited.png" alt="">
+        </a>
+      </div>
+      <div class="header-nav-inner">
+        <div class="header-item"><a href="https://mixcloud.com/a11radioshows" target="blank">ARCHIVE</a></div>
+        <div class="header-item"><a href="contact/">CONTACT</a></div>
+      </div>
+    </div>
+    <div class="flex-item">
+      <img class="splash" src="images/homepage.jpg" alt="...broadcasting live... from Cape Town to the world...">
+    </div>
+    <div id="player">
       <video-js
         id="stream"
         class="vjs-default-skin"
@@ -26,9 +45,7 @@
             aspectRatio: '16:9'
           }
         );
-
         player.on('error', function(event) {
-          console.log("Hi!")
           player.errorDisplay.dispose()
           var errorModal = player.createModal("We're currently not live! Try checking our Instagram and refreshing the page. <3 a11", {
             uncloseable: true
@@ -37,5 +54,8 @@
       </script>
     </div>
   </div>
+
+  <footer>
+  </footer>
 </body>
 </html>
