@@ -70,6 +70,15 @@ a:active {
   margin: 12px;
 }
 
+.content {
+  width: 75%;
+  height: auto;
+}
+
+.caption {
+  font-size: x-small;
+}
+
 .header-nav {
 	background-color: white;
 	display: flex;
