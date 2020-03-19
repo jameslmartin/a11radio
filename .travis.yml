@@ -4,3 +4,4 @@ node_js:
 
 dist: trusty
 sudo: false
+before_install: cd a11radio
