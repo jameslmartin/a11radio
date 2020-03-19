@@ -20,7 +20,7 @@ run-docker:
 		$(DOCKER_PORTS) \
 		--name=$(DOCKER_CONTAINER_NAME) \
 		--volume `pwd`:/root/app/ \
-		--workdir /root/app/ \
+		--workdir /root/app/$(WORKDIR_PATH) \
 		$(DOCKER_IMAGE) $(DOCKER_CMD)
 
 init: DOCKER_CONTAINER_NAME=$(APP_NAME)-init
@@ -32,8 +32,18 @@ init: ## Recreates the node modules folder locally by running npm install
 rebuild: ## Rebuild the Docker image for local dev
 	docker build . -t a11radio:latest
 
+dev: DOCKER_IMAGE=a11radio:latest
+dev: DOCKER_CONTAINER_NAME=$(APP_NAME)
+dev: DOCKER_PORTS=-p 8000:$(APP_PORT)
+dev: WORKDIR_PATH=a11radio/
+dev: DOCKER_CMD=npm run develop
+dev: DOCKER_OPTS=-it
+dev: run-docker
+dev: ## Exec into a new container
+
 exec: DOCKER_IMAGE=a11radio:latest
 exec: DOCKER_CONTAINER_NAME=$(APP_NAME)
+exec: DOCKER_PORTS=-p 8000:$(APP_PORT)
 exec: DOCKER_CMD=bash
 exec: DOCKER_OPTS=-it
 exec: run-docker
