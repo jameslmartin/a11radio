@@ -1,42 +1,5 @@
 ### A11 Radio Operations
 
-Glossary:
-
-Linode - server provider based in Germany
-
-Server - computer located remotely, likely does not have visual output (like a screen) and is usually interacted with via a terminal
-
-Terminal - text based computer navigator
-
-NGINX - web server technology used for processing inbound requests for data on a server
-
-RTMP - streaming data protocol used by OBS to stream data to the server
-
-HLS - encoding format for writing data streams to multimedia files
-
-HTTP - protocol for the web, requests for web pages or multimedia files come as HTTP
-
-SSH - “secure shell”, used to log onto and navigate remote computers/servers. SSH is installed on most linux machines (including Macs but not Windows)
-
-SFTP - Secure File Transfer Protocol, a simple terminal-based program used to upload or download files to a server
-
-Command - a program used to interact with a computer/server
-
-Argument - an option or information “passed” or given to a command to change the behavior of said command
-
-Directory - basically a folder. Directories have hierarchies. You can navigate up/down a directory, for example your documents on a Mac are usually located at /Users/<your user name>/Documents). / is also known as “root” or the “top” directory of the entire filesystem of the computer/server
-
-Terminal commands:
-1. pwd - Print Working Directory (tells you what folder your terminal is currently operating in)
-2. ls - List (shows files in working directory)
-3. cd - Change Directory (for example: cd .. will navigate your terminal one folder “up” a directory
-4. man - Manual (i. e. man ls will show you how to use ls and all its options)
-5. cat - Display the contents of a given file in the terminal
-6. vim - An advanced editor in the terminal. HIGHLY SUGGEST YOU READ ABOUT VIM AND STUDY IT ON YOUR OWN.
-7. nano - A less advanced editor in the terminal
-
-You can also read about the less command/program for viewing files, it is more advanced than cat
-
 —--
 
 A11 on Linode:
