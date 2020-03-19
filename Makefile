@@ -20,7 +20,7 @@ run-docker:
 		$(DOCKER_PORTS) \
 		--name=$(DOCKER_CONTAINER_NAME) \
 		--volume `pwd`:/root/app/ \
-		--workdir /root/app/$(WORKDIR_PATH) \
+		--workdir /root/app/ \
 		$(DOCKER_IMAGE) $(DOCKER_CMD)
 
 init: DOCKER_CONTAINER_NAME=$(APP_NAME)-init
@@ -35,7 +35,6 @@ rebuild: ## Rebuild the Docker image for local dev
 dev: DOCKER_IMAGE=a11radio:latest
 dev: DOCKER_CONTAINER_NAME=$(APP_NAME)
 dev: DOCKER_PORTS=-p 8000:$(APP_PORT)
-dev: WORKDIR_PATH=a11radio/
 dev: DOCKER_CMD=npm run develop
 dev: DOCKER_OPTS=-it
 dev: run-docker
